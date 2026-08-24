@@ -12,6 +12,7 @@ A structured collection of Data Structures and Algorithms concepts, implementati
 - Greedy Algorithms
 - Hashing
 - Heaps
+- Leetcode
 - Linked List
 - Queue
 - Recursion
@@ -48,6 +49,7 @@ DSA-Java/
 ├── greedy_algorithms/
 ├── Hashing/
 ├── Heaps/
+├── Leetcode/
 ├── LinkedList/
 ├── practice/
 ├── problems/
