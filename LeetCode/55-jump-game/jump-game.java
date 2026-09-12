@@ -1,30 +1,19 @@
 class Solution {
-    private Integer[] memo; 
-
     public boolean canJump(int[] nums) {
-        memo = new Integer[nums.length];
-        return jump(nums, 0);
-    }
+        int farthest = 0;
 
-    private boolean jump(int[] nums, int idx) {
-        if (idx >= nums.length - 1) {
-            return true;
-        }
+        for (int i = 0; i < nums.length; i++) {
+            if (i > farthest) {
+                return false;
+            }
 
-        if (memo[idx] != null) {
-            return memo[idx] == 1;
-        }
+            farthest = Math.max(farthest, i + nums[i]);
 
-        int maxJump = nums[idx];
-
-        for (int i = 1; i <= maxJump; i++) {
-            if (jump(nums, idx + i)) {
-                memo[idx] = 1; 
+            if (farthest >= nums.length - 1) {
                 return true;
             }
         }
 
-        memo[idx] = 0; 
-        return false;
+        return true;
     }
 }
