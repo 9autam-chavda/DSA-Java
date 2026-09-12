@@ -11,10 +11,12 @@ class Solution {
             return;
         }
 
+        
+        findSubset (nums, sub, ans, idx+1);
+
         sub.add(nums[idx]);
         findSubset (nums, sub, ans, idx+1);
         sub.remove(sub.size()-1);
         
-        findSubset (nums, sub, ans, idx+1);
     }
 }
